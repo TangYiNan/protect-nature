@@ -6266,284 +6266,45 @@ org.attoparser.ParseException: (Line = 85, Column = 63) Incomplete structure: "<
 2024-01-22 17:10:58.093  INFO 19944 --- [Thread-20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2791e245: startup date [Mon Jan 22 16:28:49 CST 2024]; root of context hierarchy
 2024-01-22 17:10:58.095  INFO 19944 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 2024-01-22 17:10:58.096  INFO 19944 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-01-22 22:57:47.749  INFO 16236 --- [restartedMain] com.jyj.ProtectNatureApplication         : Starting ProtectNatureApplication on DESKTOP-48URAAN with PID 16236 (started by t1761 in D:\GItHub\毕设-基于SpringBoot的保护大自然网站\protect-nature)
-2024-01-22 22:57:47.751 DEBUG 16236 --- [restartedMain] com.jyj.ProtectNatureApplication         : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2024-01-22 22:57:47.752  INFO 16236 --- [restartedMain] com.jyj.ProtectNatureApplication         : The following profiles are active: dev
-2024-01-22 22:57:48.001  INFO 16236 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f3858f1: startup date [Mon Jan 22 22:57:48 CST 2024]; root of context hierarchy
-2024-01-22 22:57:50.215  INFO 16236 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2024-01-22 22:57:50.223  INFO 16236 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-01-22 22:57:50.224  INFO 16236 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2024-01-22 22:57:50.320  INFO 16236 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-01-22 22:57:50.320  INFO 16236 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2319 ms
-2024-01-22 22:57:50.531  INFO 16236 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2024-01-22 22:57:50.537  INFO 16236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2024-01-22 22:57:50.538  INFO 16236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2024-01-22 22:57:50.538  INFO 16236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2024-01-22 22:57:50.538  INFO 16236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2024-01-22 22:57:51.315 ERROR 16236 --- [restartedMain] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
-
-java.sql.SQLSyntaxErrorException: Unknown database 'blog'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:326)
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:366)
-	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
-	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:139)
-	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c614f070.CGLIB$jpaVendorAdapter$5(<generated>)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c614f070$$FastClassBySpringCGLIB$$aded1eb7.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c614f070.jpaVendorAdapter(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.jyj.ProtectNatureApplication.main(ProtectNatureApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-
-2024-01-22 22:57:51.319  WARN 16236 --- [restartedMain] o.s.b.a.orm.jpa.DatabaseLookup           : Unable to determine jdbc url from datasource
-
-org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'blog'
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:339)
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:366)
-	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
-	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:139)
-	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c614f070.CGLIB$jpaVendorAdapter$5(<generated>)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c614f070$$FastClassBySpringCGLIB$$aded1eb7.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c614f070.jpaVendorAdapter(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.jyj.ProtectNatureApplication.main(ProtectNatureApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'blog'
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:326)
-	... 66 common frames omitted
-Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'blog'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
-	... 67 common frames omitted
-
-2024-01-22 22:57:51.364  INFO 16236 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2024-01-22 22:57:51.374  INFO 16236 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2024-01-23 08:46:45.281  INFO 19548 --- [restartedMain] com.jyj.ProtectNatureApplication         : Starting ProtectNatureApplication on DESKTOP-4EOG7SA with PID 19548 (E:\GitHub\protect-nature\target\classes started by TSZ in E:\GitHub\protect-nature)
+2024-01-23 08:46:45.281 DEBUG 19548 --- [restartedMain] com.jyj.ProtectNatureApplication         : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2024-01-23 08:46:45.282  INFO 19548 --- [restartedMain] com.jyj.ProtectNatureApplication         : The following profiles are active: dev
+2024-01-23 08:46:45.402  INFO 19548 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2791e245: startup date [Tue Jan 23 08:46:45 CST 2024]; root of context hierarchy
+2024-01-23 08:46:46.929  INFO 19548 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2024-01-23 08:46:46.935  INFO 19548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-23 08:46:46.935  INFO 19548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2024-01-23 08:46:46.996  INFO 19548 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-23 08:46:46.997  INFO 19548 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1595 ms
+2024-01-23 08:46:47.142  INFO 19548 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2024-01-23 08:46:47.145  INFO 19548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-01-23 08:46:47.146  INFO 19548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-01-23 08:46:47.146  INFO 19548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-01-23 08:46:47.146  INFO 19548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-01-23 08:46:47.997  INFO 19548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:46:48.005  INFO 19548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2024-01-22 22:57:51.429  INFO 16236 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2024-01-22 22:57:51.432  INFO 16236 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2024-01-22 22:57:51.433  INFO 16236 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2024-01-22 22:57:51.472  INFO 16236 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2024-01-22 22:57:51.682 ERROR 16236 --- [restartedMain] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
-
-java.sql.SQLSyntaxErrorException: Unknown database 'blog'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:254)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:228)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
-	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
-	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.jyj.ProtectNatureApplication.main(ProtectNatureApplication.java:10)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-
-2024-01-22 22:57:51.683  WARN 16236 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Unknown database 'blog'
-2024-01-22 22:57:51.684  WARN 16236 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2024-01-22 22:57:51.688  INFO 16236 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-01-22 22:57:51.699  INFO 16236 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+2024-01-23 08:46:48.045  INFO 19548 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2024-01-23 08:46:48.046  INFO 19548 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2024-01-23 08:46:48.047  INFO 19548 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2024-01-23 08:46:48.074  INFO 19548 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-01-23 08:46:48.169  INFO 19548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-01-23 08:46:48.483  INFO 19548 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2024-01-23 08:46:48.494  INFO 19548 --- [restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: t_blog
+2024-01-23 08:46:48.559  INFO 19548 --- [restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: t_blog_tags
+2024-01-23 08:46:48.572  INFO 19548 --- [restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: t_comment
+2024-01-23 08:46:48.597  INFO 19548 --- [restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: t_tag
+2024-01-23 08:46:48.609  INFO 19548 --- [restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: t_type
+2024-01-23 08:46:48.622  INFO 19548 --- [restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: t_user
+2024-01-23 08:46:48.642  INFO 19548 --- [restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000263: More than one table found: t_user
+2024-01-23 08:46:48.643  WARN 19548 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2024-01-23 08:46:48.647  INFO 19548 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-23 08:46:48.655  INFO 19548 --- [restartedMain] utoConfigurationReportLoggingInitializer :
 
 Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2024-01-22 22:57:51.706 ERROR 16236 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+2024-01-23 08:46:48.660 ERROR 19548 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -6566,18 +6327,9 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:228)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
-	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
 	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
@@ -6585,157 +6337,292 @@ Caused by: org.hibernate.service.spi.ServiceException: Unable to create requeste
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
 	... 21 common frames omitted
-Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:254)
-	... 37 common frames omitted
+Caused by: org.hibernate.tool.schema.extract.spi.SchemaExtractionException: More than one table found in namespace (, ) : t_user
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:381)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTable(InformationExtractorJdbcDatabaseMetaDataImpl.java:279)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTableInformation(DatabaseInformationImpl.java:105)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigrationToTargets(SchemaMigratorImpl.java:162)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:60)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 27 common frames omitted
 
-2024-01-22 23:01:12.059  INFO 2300 --- [restartedMain] com.jyj.ProtectNatureApplication         : Starting ProtectNatureApplication on DESKTOP-48URAAN with PID 2300 (started by t1761 in D:\GItHub\毕设-基于SpringBoot的保护大自然网站\protect-nature)
-2024-01-22 23:01:12.060 DEBUG 2300 --- [restartedMain] com.jyj.ProtectNatureApplication         : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
-2024-01-22 23:01:12.060  INFO 2300 --- [restartedMain] com.jyj.ProtectNatureApplication         : The following profiles are active: dev
-2024-01-22 23:01:12.287  INFO 2300 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e7bd84a: startup date [Mon Jan 22 23:01:12 CST 2024]; root of context hierarchy
-2024-01-22 23:01:13.972  INFO 2300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2024-01-22 23:01:13.979  INFO 2300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-01-22 23:01:13.980  INFO 2300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
-2024-01-22 23:01:14.067  INFO 2300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-01-22 23:01:14.067  INFO 2300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1780 ms
-2024-01-22 23:01:14.257  INFO 2300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2024-01-22 23:01:14.261  INFO 2300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2024-01-22 23:01:14.262  INFO 2300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2024-01-22 23:01:14.263  INFO 2300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2024-01-22 23:01:14.263  INFO 2300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2024-01-22 23:01:15.167  INFO 2300 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2024-01-22 23:01:15.177  INFO 2300 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2024-01-23 08:48:57.741  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Starting ProtectNatureApplication on DESKTOP-4EOG7SA with PID 8088 (E:\GitHub\protect-nature\target\classes started by TSZ in E:\GitHub\protect-nature)
+2024-01-23 08:48:57.741 DEBUG 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2024-01-23 08:48:57.741  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : The following profiles are active: dev
+2024-01-23 08:48:57.858  INFO 8088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5535c26: startup date [Tue Jan 23 08:48:57 CST 2024]; root of context hierarchy
+2024-01-23 08:48:59.129  INFO 8088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2024-01-23 08:48:59.134  INFO 8088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-23 08:48:59.134  INFO 8088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2024-01-23 08:48:59.194  INFO 8088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-23 08:48:59.194  INFO 8088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1336 ms
+2024-01-23 08:48:59.334  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2024-01-23 08:48:59.337  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-01-23 08:48:59.338  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-01-23 08:48:59.338  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-01-23 08:48:59.338  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-01-23 08:49:00.027  INFO 8088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:49:00.035  INFO 8088 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2024-01-22 23:01:15.231  INFO 2300 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2024-01-22 23:01:15.233  INFO 2300 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2024-01-22 23:01:15.233  INFO 2300 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2024-01-22 23:01:15.273  INFO 2300 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2024-01-22 23:01:15.385  INFO 2300 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2024-01-22 23:01:15.788  INFO 2300 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2024-01-22 23:01:16.086  INFO 2300 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-22 23:01:16.362  INFO 2300 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2024-01-22 23:01:17.110  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e7bd84a: startup date [Mon Jan 22 23:01:12 CST 2024]; root of context hierarchy
-2024-01-22 23:01:17.180  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.jyj.web.AboutShowController.about()
-2024-01-22 23:01:17.185  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.186  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
-2024-01-22 23:01:17.186  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.input(org.springframework.ui.Model)
-2024-01-22 23:01:17.186  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.post(com.jyj.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2024-01-22 23:01:17.186  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2024-01-22 23:01:17.187  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
-2024-01-22 23:01:17.188  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.loginPage()
-2024-01-22 23:01:17.188  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.188  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2024-01-22 23:01:17.190  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.190  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.input(org.springframework.ui.Model)
-2024-01-22 23:01:17.190  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2024-01-22 23:01:17.191  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.post(com.jyj.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.191  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2024-01-22 23:01:17.191  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.editPost(com.jyj.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.192  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.192  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2024-01-22 23:01:17.193  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.input(org.springframework.ui.Model)
-2024-01-22 23:01:17.193  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.post(com.jyj.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.193  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2024-01-22 23:01:17.193  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.editPost(com.jyj.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2024-01-22 23:01:17.195  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.jyj.web.ArchiveShowController.archives(org.springframework.ui.Model)
-2024-01-22 23:01:17.196  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.jyj.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
-2024-01-22 23:01:17.196  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.jyj.web.CommentController.post(com.jyj.po.Comment,javax.servlet.http.HttpSession)
-2024-01-22 23:01:17.197  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2024-01-22 23:01:17.197  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.jyj.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
-2024-01-22 23:01:17.197  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
-2024-01-22 23:01:17.197  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.aboutus(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2024-01-22 23:01:17.197  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.newblogs(org.springframework.ui.Model)
-2024-01-22 23:01:17.198  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2024-01-22 23:01:17.198  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2024-01-22 23:01:17.199  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2024-01-22 23:01:17.200  INFO 2300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2024-01-22 23:01:17.249  INFO 2300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2024-01-22 23:01:17.249  INFO 2300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2024-01-22 23:01:17.268  INFO 2300 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2024-01-22 23:01:17.293  INFO 2300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2024-01-22 23:01:17.952  INFO 2300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-01-22 23:01:18.052  INFO 2300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2024-01-22 23:01:18.100  INFO 2300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2024-01-22 23:01:18.104  INFO 2300 --- [restartedMain] com.jyj.ProtectNatureApplication         : Started ProtectNatureApplication in 6.618 seconds (JVM running for 7.561)
-2024-01-22 23:01:29.286  INFO 2300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2024-01-22 23:01:29.286  INFO 2300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2024-01-22 23:01:29.315  INFO 2300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
-2024-01-22 23:01:29.367  INFO 2300 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:01:29.573  WARN 2300 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2024-01-22 23:01:29.595  WARN 2300 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
-2024-01-22 23:01:29.609  INFO 2300 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Result : aboutus
-2024-01-22 23:01:38.514  INFO 2300 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/index', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:01:38.537  INFO 2300 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Result : index
-2024-01-22 23:01:39.103  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:39.112  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:40.158  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.jyj.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2024-01-22 23:01:40.181  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Result : types
-2024-01-22 23:01:40.565  INFO 2300 --- [http-nio-8080-exec-8] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:40.578  INFO 2300 --- [http-nio-8080-exec-8] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:41.298  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.jyj.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2024-01-22 23:01:41.324  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : tags
-2024-01-22 23:01:41.756  INFO 2300 --- [http-nio-8080-exec-9] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:41.767  INFO 2300 --- [http-nio-8080-exec-9] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:42.968  INFO 2300 --- [http-nio-8080-exec-10] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.jyj.web.ArchiveShowController.archives', args=[{}]}
-2024-01-22 23:01:42.991  INFO 2300 --- [http-nio-8080-exec-10] com.jyj.aspect.LogAspect                 : Result : archives
-2024-01-22 23:01:43.347  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:43.357  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:44.077  INFO 2300 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.jyj.web.AboutShowController.about', args=[]}
-2024-01-22 23:01:44.081  INFO 2300 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Result : about
-2024-01-22 23:01:44.393  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:44.408  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:45.439  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:01:45.455  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Result : aboutus
-2024-01-22 23:01:46.460  INFO 2300 --- [http-nio-8080-exec-10] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/index', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:01:46.475  INFO 2300 --- [http-nio-8080-exec-10] com.jyj.aspect.LogAspect                 : Result : index
-2024-01-22 23:01:46.935  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:46.949  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:47.262  INFO 2300 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.jyj.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2024-01-22 23:01:47.273  INFO 2300 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Result : types
-2024-01-22 23:01:47.732  INFO 2300 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:47.746  INFO 2300 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:48.509  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.jyj.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2024-01-22 23:01:48.523  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Result : tags
-2024-01-22 23:01:48.937  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:01:48.952  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:01:51.253  INFO 2300 --- [http-nio-8080-exec-9] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:01:51.270  INFO 2300 --- [http-nio-8080-exec-9] com.jyj.aspect.LogAspect                 : Result : aboutus
-2024-01-22 23:02:05.043  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/index', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:02:05.060  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : index
-2024-01-22 23:02:05.492  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:02:05.504  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:02:09.357  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.jyj.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2024-01-22 23:02:09.365  INFO 2300 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Result : types
-2024-01-22 23:02:09.849  INFO 2300 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:02:09.857  INFO 2300 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:02:10.548  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/index', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:02:10.556  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Result : index
-2024-01-22 23:02:11.055  INFO 2300 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:02:11.061  INFO 2300 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:02:15.360  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.jyj.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2024-01-22 23:02:15.368  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : types
-2024-01-22 23:02:15.775  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:02:15.787  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:02:17.009  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.jyj.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
-2024-01-22 23:02:17.018  INFO 2300 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Result : tags
-2024-01-22 23:02:17.374  INFO 2300 --- [http-nio-8080-exec-10] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:02:17.384  INFO 2300 --- [http-nio-8080-exec-10] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:02:18.292  INFO 2300 --- [http-nio-8080-exec-8] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.jyj.web.ArchiveShowController.archives', args=[{}]}
-2024-01-22 23:02:18.302  INFO 2300 --- [http-nio-8080-exec-8] com.jyj.aspect.LogAspect                 : Result : archives
-2024-01-22 23:02:18.606  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:02:18.615  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:02:20.834  INFO 2300 --- [http-nio-8080-exec-9] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:02:20.844  INFO 2300 --- [http-nio-8080-exec-9] com.jyj.aspect.LogAspect                 : Result : aboutus
-2024-01-22 23:14:16.984  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/index', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
-2024-01-22 23:14:17.001  INFO 2300 --- [http-nio-8080-exec-5] com.jyj.aspect.LogAspect                 : Result : index
-2024-01-22 23:14:17.678  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
-2024-01-22 23:14:17.687  INFO 2300 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
-2024-01-22 23:15:16.527  INFO 2300 --- [Thread-23] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e7bd84a: startup date [Mon Jan 22 23:01:12 CST 2024]; root of context hierarchy
-2024-01-22 23:15:16.530  INFO 2300 --- [Thread-23] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2024-01-22 23:15:16.531  INFO 2300 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:49:00.075  INFO 8088 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2024-01-23 08:49:00.076  INFO 8088 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2024-01-23 08:49:00.077  INFO 8088 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2024-01-23 08:49:00.104  INFO 8088 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-01-23 08:49:00.197  INFO 8088 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-01-23 08:49:00.508  INFO 8088 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2024-01-23 08:49:01.001  INFO 8088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:49:01.225  INFO 8088 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2024-01-23 08:49:01.820  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5535c26: startup date [Tue Jan 23 08:48:57 CST 2024]; root of context hierarchy
+2024-01-23 08:49:01.873  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.jyj.web.AboutShowController.about()
+2024-01-23 08:49:01.876  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.876  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
+2024-01-23 08:49:01.876  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.input(org.springframework.ui.Model)
+2024-01-23 08:49:01.876  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
+2024-01-23 08:49:01.877  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:49:01.877  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.post(com.jyj.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2024-01-23 08:49:01.878  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.loginPage()
+2024-01-23 08:49:01.878  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.878  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2024-01-23 08:49:01.879  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.879  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.input(org.springframework.ui.Model)
+2024-01-23 08:49:01.879  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:49:01.879  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.editPost(com.jyj.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.880  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:49:01.880  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.post(com.jyj.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.881  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.881  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:49:01.881  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.input(org.springframework.ui.Model)
+2024-01-23 08:49:01.881  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:49:01.881  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.editPost(com.jyj.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.882  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.post(com.jyj.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:49:01.883  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.jyj.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2024-01-23 08:49:01.884  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.jyj.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:49:01.884  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.jyj.web.CommentController.post(com.jyj.po.Comment,javax.servlet.http.HttpSession)
+2024-01-23 08:49:01.884  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:49:01.884  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.jyj.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2024-01-23 08:49:01.885  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:49:01.885  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.newblogs(org.springframework.ui.Model)
+2024-01-23 08:49:01.885  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.aboutus(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:49:01.885  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:49:01.885  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:49:01.886  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-01-23 08:49:01.887  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-01-23 08:49:01.928  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:49:01.928  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:49:01.943  INFO 8088 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2024-01-23 08:49:01.963  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:49:02.489  INFO 8088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-23 08:49:02.586  INFO 8088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-01-23 08:49:02.620  INFO 8088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2024-01-23 08:49:02.623  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Started ProtectNatureApplication in 5.17 seconds (JVM running for 5.698)
+2024-01-23 08:49:10.155  INFO 8088 --- [Thread-16] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5535c26: startup date [Tue Jan 23 08:48:57 CST 2024]; root of context hierarchy
+2024-01-23 08:49:10.157  INFO 8088 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2024-01-23 08:49:10.159  INFO 8088 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:49:10.479  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Starting ProtectNatureApplication on DESKTOP-4EOG7SA with PID 8088 (E:\GitHub\protect-nature\target\classes started by TSZ in E:\GitHub\protect-nature)
+2024-01-23 08:49:10.479 DEBUG 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2024-01-23 08:49:10.479  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : The following profiles are active: dev
+2024-01-23 08:49:10.482  INFO 8088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8f47653: startup date [Tue Jan 23 08:49:10 CST 2024]; root of context hierarchy
+2024-01-23 08:49:11.228  INFO 8088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2024-01-23 08:49:11.229  INFO 8088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-23 08:49:11.229  INFO 8088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2024-01-23 08:49:11.244  INFO 8088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-23 08:49:11.244  INFO 8088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 762 ms
+2024-01-23 08:49:11.283  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2024-01-23 08:49:11.283  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-01-23 08:49:11.284  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-01-23 08:49:11.284  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-01-23 08:49:11.284  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-01-23 08:49:11.644  INFO 8088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:49:11.644  INFO 8088 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-01-23 08:49:11.680  INFO 8088 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-01-23 08:49:12.624  INFO 8088 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2024-01-23 08:49:12.737  INFO 8088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:49:12.835  INFO 8088 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2024-01-23 08:49:12.881  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8f47653: startup date [Tue Jan 23 08:49:10 CST 2024]; root of context hierarchy
+2024-01-23 08:49:12.891  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-01-23 08:49:12.892  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-01-23 08:49:12.898  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:49:12.898  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:49:12.908  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:49:12.998  INFO 8088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-23 08:49:13.091  INFO 8088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-01-23 08:49:13.100  INFO 8088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2024-01-23 08:49:13.101  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Started ProtectNatureApplication in 2.673 seconds (JVM running for 16.176)
+2024-01-23 08:49:13.214  INFO 8088 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-01-23 08:49:13.214  INFO 8088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-01-23 08:49:13.234  INFO 8088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2024-01-23 08:50:21.896  INFO 8088 --- [Thread-25] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8f47653: startup date [Tue Jan 23 08:49:10 CST 2024]; root of context hierarchy
+2024-01-23 08:50:21.897  INFO 8088 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2024-01-23 08:50:21.898  INFO 8088 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:50:22.259  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Starting ProtectNatureApplication on DESKTOP-4EOG7SA with PID 8088 (E:\GitHub\protect-nature\target\classes started by TSZ in E:\GitHub\protect-nature)
+2024-01-23 08:50:22.260 DEBUG 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2024-01-23 08:50:22.260  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : The following profiles are active: dev
+2024-01-23 08:50:22.263  INFO 8088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689501b: startup date [Tue Jan 23 08:50:22 CST 2024]; root of context hierarchy
+2024-01-23 08:50:22.940  INFO 8088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2024-01-23 08:50:22.941  INFO 8088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-23 08:50:22.941  INFO 8088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2024-01-23 08:50:22.952  INFO 8088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-23 08:50:22.953  INFO 8088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 690 ms
+2024-01-23 08:50:23.004  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2024-01-23 08:50:23.004  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-01-23 08:50:23.004  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-01-23 08:50:23.004  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-01-23 08:50:23.004  INFO 8088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-01-23 08:50:23.231  INFO 8088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:50:23.231  INFO 8088 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-01-23 08:50:23.269  INFO 8088 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-01-23 08:50:23.308  INFO 8088 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2024-01-23 08:50:23.399  INFO 8088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 08:50:23.491  INFO 8088 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2024-01-23 08:50:23.872  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689501b: startup date [Tue Jan 23 08:50:22 CST 2024]; root of context hierarchy
+2024-01-23 08:50:23.890  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.jyj.web.AboutShowController.about()
+2024-01-23 08:50:23.891  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.891  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
+2024-01-23 08:50:23.891  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.input(org.springframework.ui.Model)
+2024-01-23 08:50:23.891  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
+2024-01-23 08:50:23.891  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:50:23.892  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.post(com.jyj.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2024-01-23 08:50:23.892  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.loginPage()
+2024-01-23 08:50:23.892  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.892  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2024-01-23 08:50:23.893  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.893  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.input(org.springframework.ui.Model)
+2024-01-23 08:50:23.893  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:50:23.893  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.editPost(com.jyj.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.894  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:50:23.894  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.post(com.jyj.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.896  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.896  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:50:23.896  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.input(org.springframework.ui.Model)
+2024-01-23 08:50:23.896  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:50:23.896  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.editPost(com.jyj.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.897  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.post(com.jyj.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 08:50:23.897  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.jyj.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2024-01-23 08:50:23.897  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.jyj.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:50:23.897  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.jyj.web.CommentController.post(com.jyj.po.Comment,javax.servlet.http.HttpSession)
+2024-01-23 08:50:23.898  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:50:23.898  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.jyj.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2024-01-23 08:50:23.898  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:50:23.898  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.newblogs(org.springframework.ui.Model)
+2024-01-23 08:50:23.898  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.aboutus(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 08:50:23.898  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:50:23.898  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2024-01-23 08:50:23.900  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-01-23 08:50:23.900  INFO 8088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-01-23 08:50:23.928  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:50:23.928  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:50:23.939  INFO 8088 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2024-01-23 08:50:23.947  INFO 8088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 08:50:24.173  INFO 8088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-23 08:50:24.266  INFO 8088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-01-23 08:50:24.273  INFO 8088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2024-01-23 08:50:24.274  INFO 8088 --- [restartedMain] com.jyj.ProtectNatureApplication         : Started ProtectNatureApplication in 2.077 seconds (JVM running for 87.349)
+2024-01-23 08:51:43.320  INFO 8088 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-01-23 08:51:43.320  INFO 8088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-01-23 08:51:43.327  INFO 8088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+2024-01-23 08:51:43.333  INFO 8088 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2024-01-23 08:51:43.397  WARN 8088 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2024-01-23 08:51:43.404  WARN 8088 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2024-01-23 08:51:43.409  INFO 8088 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Result : aboutus
+2024-01-23 08:52:20.689  INFO 8088 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/index', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2024-01-23 08:52:20.698  INFO 8088 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Result : index
+2024-01-23 08:52:21.079  INFO 8088 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.newblogs', args=[{}]}
+2024-01-23 08:52:21.083  INFO 8088 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Result : _fragments :: newblogList
+2024-01-23 08:52:27.425  INFO 8088 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2024-01-23 08:52:27.434  INFO 8088 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Result : aboutus
+2024-01-23 08:52:57.246  INFO 8088 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2024-01-23 08:52:57.254  INFO 8088 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Result : aboutus
+2024-01-23 08:53:02.102  INFO 8088 --- [Thread-38] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689501b: startup date [Tue Jan 23 08:50:22 CST 2024]; root of context hierarchy
+2024-01-23 08:53:02.137  INFO 8088 --- [Thread-38] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2024-01-23 08:53:02.138  INFO 8088 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 09:06:14.437  INFO 18960 --- [restartedMain] com.jyj.ProtectNatureApplication         : Starting ProtectNatureApplication on DESKTOP-4EOG7SA with PID 18960 (E:\GitHub\protect-nature\target\classes started by TSZ in E:\GitHub\protect-nature)
+2024-01-23 09:06:14.438 DEBUG 18960 --- [restartedMain] com.jyj.ProtectNatureApplication         : Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2024-01-23 09:06:14.438  INFO 18960 --- [restartedMain] com.jyj.ProtectNatureApplication         : The following profiles are active: dev
+2024-01-23 09:06:14.554  INFO 18960 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53a17882: startup date [Tue Jan 23 09:06:14 CST 2024]; root of context hierarchy
+2024-01-23 09:06:15.843  INFO 18960 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2024-01-23 09:06:15.848  INFO 18960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-23 09:06:15.848  INFO 18960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2024-01-23 09:06:15.908  INFO 18960 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-23 09:06:15.908  INFO 18960 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1354 ms
+2024-01-23 09:06:16.050  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2024-01-23 09:06:16.053  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-01-23 09:06:16.054  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-01-23 09:06:16.054  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-01-23 09:06:16.054  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-01-23 09:06:16.760  INFO 18960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2024-01-23 09:06:16.768  INFO 18960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-01-23 09:06:16.810  INFO 18960 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2024-01-23 09:06:16.811  INFO 18960 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2024-01-23 09:06:16.811  INFO 18960 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2024-01-23 09:06:16.839  INFO 18960 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-01-23 09:06:16.934  INFO 18960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-01-23 09:06:17.247  INFO 18960 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2024-01-23 09:06:17.382  INFO 18960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-23 09:06:17.596  INFO 18960 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2024-01-23 09:06:18.201  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53a17882: startup date [Tue Jan 23 09:06:14 CST 2024]; root of context hierarchy
+2024-01-23 09:06:18.256  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.jyj.web.AboutShowController.about()
+2024-01-23 09:06:18.259  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.260  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
+2024-01-23 09:06:18.260  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.input(org.springframework.ui.Model)
+2024-01-23 09:06:18.260  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.BlogController.post(com.jyj.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2024-01-23 09:06:18.260  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.jyj.vo.BlogQuery,org.springframework.ui.Model)
+2024-01-23 09:06:18.260  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 09:06:18.261  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2024-01-23 09:06:18.261  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.261  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.LoginController.loginPage()
+2024-01-23 09:06:18.262  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.262  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.input(org.springframework.ui.Model)
+2024-01-23 09:06:18.263  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 09:06:18.263  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.post(com.jyj.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.263  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TagController.editPost(com.jyj.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.263  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 09:06:18.264  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.264  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 09:06:18.265  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.input(org.springframework.ui.Model)
+2024-01-23 09:06:18.265  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.post(com.jyj.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.265  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.jyj.web.admin.TypeController.editPost(com.jyj.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2024-01-23 09:06:18.265  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.jyj.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 09:06:18.266  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.jyj.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2024-01-23 09:06:18.267  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.jyj.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 09:06:18.267  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.jyj.web.CommentController.post(com.jyj.po.Comment,javax.servlet.http.HttpSession)
+2024-01-23 09:06:18.268  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 09:06:18.268  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.jyj.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2024-01-23 09:06:18.268  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2024-01-23 09:06:18.268  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.aboutus(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2024-01-23 09:06:18.268  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.jyj.web.IndexController.newblogs(org.springframework.ui.Model)
+2024-01-23 09:06:18.268  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2024-01-23 09:06:18.269  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.jyj.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2024-01-23 09:06:18.270  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-01-23 09:06:18.270  INFO 18960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-01-23 09:06:18.311  INFO 18960 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 09:06:18.311  INFO 18960 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 09:06:18.327  INFO 18960 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2024-01-23 09:06:18.346  INFO 18960 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-01-23 09:06:18.857  INFO 18960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-23 09:06:18.954  INFO 18960 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-01-23 09:06:18.989  INFO 18960 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2024-01-23 09:06:18.992  INFO 18960 --- [restartedMain] com.jyj.ProtectNatureApplication         : Started ProtectNatureApplication in 4.837 seconds (JVM running for 5.337)
+2024-01-23 09:14:59.157  INFO 18960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-01-23 09:14:59.157  INFO 18960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-01-23 09:14:59.182  INFO 18960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2024-01-23 09:14:59.205  INFO 18960 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2024-01-23 09:14:59.270  WARN 18960 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2024-01-23 09:14:59.278  WARN 18960 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2024-01-23 09:14:59.283  INFO 18960 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Result : aboutus
+2024-01-23 09:15:03.995  INFO 18960 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.aboutus', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2024-01-23 09:15:04.004  INFO 18960 --- [http-nio-8080-exec-3] com.jyj.aspect.LogAspect                 : Result : aboutus
+2024-01-23 09:15:05.800  INFO 18960 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Request : {url='http://localhost:8080/index', ip='0:0:0:0:0:0:0:1', classMethod='com.jyj.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2024-01-23 09:15:05.811  INFO 18960 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Result : index
+2024-01-23 09:15:31.601  INFO 18960 --- [Thread-19] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53a17882: startup date [Tue Jan 23 09:06:14 CST 2024]; root of context hierarchy
+2024-01-23 09:15:31.603  INFO 18960 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2024-01-23 09:15:31.604  INFO 18960 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
