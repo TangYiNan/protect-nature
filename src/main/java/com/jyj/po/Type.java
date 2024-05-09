@@ -16,7 +16,7 @@ public class Type {
     @Id
     @GeneratedValue
     private Long id;
-    @NotBlank(message = "分类名称不能为空")
+    @NotBlank(message = "领域名称不能为空")
     private String name;
 
     @OneToMany(mappedBy = "type")

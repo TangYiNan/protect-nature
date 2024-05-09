@@ -52,7 +52,7 @@ public class TypeController {
     public String post(@Valid Type type,BindingResult result, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
         if (type1 != null) {
-            result.rejectValue("name","nameError","不能添加重复的分类");
+            result.rejectValue("name","nameError","不能添加重复的领域");
         }
         if (result.hasErrors()) {
             return "admin/types-input";
@@ -71,7 +71,7 @@ public class TypeController {
     public String editPost(@Valid Type type, BindingResult result,@PathVariable Long id, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
         if (type1 != null) {
-            result.rejectValue("name","nameError","不能添加重复的分类");
+            result.rejectValue("name","nameError","不能添加重复的领域");
         }
         if (result.hasErrors()) {
             return "admin/types-input";
