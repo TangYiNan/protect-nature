@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:replace="${title}">保护大自然</title>
-    <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">-->
     <link rel="stylesheet" href="../css/semantic.min.css" th:href="@{/css/semantic.min.css}">
     <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
     <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
@@ -13,7 +12,7 @@
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
     <link rel="stylesheet" href="../css/new/style.css" th:href="@{/css/new/style.css}">
     <link rel="stylesheet" href="../css/new/responsive.css" th:href="@{/css/new/responsive.css}">
-    <link rel="icon" href="images/bigLOGO.ico" type="image/x-icon">
+    <link rel="icon" href="../images/bigLOGO.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -24,7 +23,7 @@
                 <div class="logo-box pull-left">
                     <figure class="logo">
                         <a href="index.html">
-                             <img src="../images/logo.png" style="width: 175px;height: 63px" alt="">
+                            <img src="../images/logo.png" style="width: 200px;height: 63px" alt="">
                         </a>
                     </figure>
                 </div>
@@ -58,9 +57,10 @@
                                     </li>
                                 </ul>
                                 <div class="right m-item item m-mobile-hide">
-                                    <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                                    <form name="search" action="#" th:action="@{/search}" method="post">
                                         <div class="icon inverted transparent input m-margin-tb-tiny">
-                                            <input type="text" name="query" placeholder="  搜索...." th:value="${query}"
+                                            <input type="text" name="query" placeholder="  搜索自然文章...."
+                                                   th:value="${query}"
                                                    style="border: 0.5px solid #fd7061;border-radius: 12px;margin-top: 5px;margin-left: 10px">
                                             <i onclick="document.forms['search'].submit()" class="search link icon"
                                                style="color: #fd7061"></i>
@@ -82,7 +82,8 @@
     <!--Sticky Header-->
     <div class="sticky-header">
         <div class="container clearfix">
-            <figure class="logo-box"><a href="index.html"><img src="../images/logo.png" alt="" style="width: 90px;height: 40px"></a></figure>
+            <figure class="logo-box"><a href="index.html"><img src="../images/logo.png" alt=""
+                                                               style="width: 90px;height: 40px"></a></figure>
             <div class="menu-area">
                 <nav class="main-menu navbar-expand-lg">
                     <div class="navbar-collapse collapse clearfix">
@@ -129,21 +130,22 @@
         <div class="container">
             <div class="widget-section">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                        <div class="about-widget footer-widget">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="about-widget footer-widget" style="text-align: center">
                             <h3 class="widget-title">关于我们</h3>
                             <div class="widget-content">
                                 <div class="text">
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese
-                                        runt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
-                                    <p>iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                                        aperiam.</p>
+                                    <p>阅读我们的文章，感受大自然的魅力，为保护地球贡献一份力量！</p>
+                                    <p>每一篇文章都是对大自然的深情告白，每一个行动都是对地球的呵护。加入我们，共同守护绿色家园！</p>
+                                    <p>大自然的美景需要我们共同守护，让管理员的笔触为您描绘一个绿色的未来！</p>
+<!--                                    <p>用管理员的笔触记录大自然的美丽瞬间，用我们的行动守护地球的绿色宝藏！</p>-->
+<!--                                    <p>传递绿色理念，倡导环保行动。让管理员的文章引领我们走向更美好的未来！</p>-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                        <div class="link-widget footer-widget">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="link-widget footer-widget" style="text-align: center">
                             <h3 class="widget-title">菜单列表</h3>
                             <div class="widget-content">
                                 <ul>
@@ -157,111 +159,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                        <div class="contact-widget footer-widget">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="contact-widget footer-widget" style="text-align: center">
                             <h3 class="widget-title">联系我们</h3>
                             <div class="widget-content">
-                                <div class="text">联系我们，我们一起保护大自然，让地球更加美好。
+                                <div class="text">联系我们，给我们分享相关保护自然的文章，一起保护大自然，让地球更加美好。
                                 </div>
                                 <ul class="info-list">
-                                    <li><i class="fas fa-home"></i>1201 park street, Fifth Avenue, Dhanmondy, Dhaka</li>
-                                    <li><i class="fas fa-phone"></i><a href="tel:123456789">[88] 657 524 332</a></li>
-                                    <li><i class="fas fa-envelope"></i><a href="mailto:1234@gmail.com">1234@gmail.com</a>
-                                    </li>
+                                    <li><i class="fas fa-home"></i>联系电话：123456789</li>
+                                    <li><i class="fas fa-phone"></i>联系地址：沈阳工程学院</li>
+                                    <li><i class="fas fa-envelope"></i>联系邮箱：12345678@163.com</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                        <div class="subscribe-widget footer-widget">
-                            <h3 class="widget-title">Subscribe Now</h3>
-                            <div class="widget-content">
-                                <div class="text">Lorem ipsum dolor sit amet, consecte- tur adipisicing elit sed do
-                                    eiusmod.
-                                </div>
-                                <div class="subscribe-inner">
-                                    <form action="#" method="post" class="subscribe-form">
-                                        <div class="form-group">
-                                            <input type="email" name="email" placeholder="Enter Your Email" required="">
-                                            <button type="submit" class="theme-btn">Subscribe</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="inner-container clearfix">
-                <div class="left-content pull-left">
-                    <div class="copyright">Copyright &copy; <a href="#">Protect-Nature</a> 2024. All Rights Reserved</div>
-                </div>
-                <div class="right-content pull-right">
-                    <figure class="footer-logo"><a href="aboutus.html"><img src="../images/footer-logo.png" alt=""></a>
-                    </figure>
-                    <ul class="social-style-one footer-social clearfix">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<!--<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">-->
-<!--  <div class="ui center aligned container">-->
-<!--    <div class="ui inverted divided stackable grid">-->
-<!--      <div class="three wide column">-->
-<!--        <div class="ui inverted link list">-->
-<!--          <div class="item">-->
-<!--            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"  class="ui rounded image" alt="" style="width: 110px">-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="three wide column" >-->
-<!--        <h4 class="ui inverted header m-text-thin m-text-spaced " >最新自然文章</h4>-->
-<!--        <div id="newblog-container">-->
-<!--          <div class="ui inverted link list" th:fragment="newblogList">-->
-<!--            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">用户故事（User Story）</a>-->
-<!--            &lt;!&ndash;/*&ndash;&gt;-->
-<!--            <a href="#" class="item m-text-thin">用户故事（User Story）</a>-->
-<!--            <a href="#" class="item m-text-thin">用户故事（User Story）</a>-->
-<!--            &lt;!&ndash;*/&ndash;&gt;-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="three wide column">-->
-<!--        <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>-->
-<!--        <div class="ui inverted link list">-->
-<!--          <a href="#" class="item m-text-thin" th:text="#{index.email}">Email：lirenmi@163.com</a>-->
-<!--          <a href="#" class="item m-text-thin" th:text="#{index.qq}">QQ：865729312</a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="seven wide column">-->
-<!--        <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>-->
-<!--        <p class="m-text-thin m-text-spaced m-opacity-mini" th:text="#{index.blogDescription}">这是我的个人自然文章、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="ui inverted section divider"></div>-->
-<!--    <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - <span th:text="${#dates.year(#dates.createNow())}">2017</span> Lirenmi Designed by Lirenmi</p>-->
-<!--  </div>-->
 
-<!--</footer>-->
-
-<th:block th:fragment="script">
-
-
+<th:block th:fragment="script" >
+    <script src="../static/ui/jquery.min.js" th:src="@{/ui/jquery.min.js}"></script>
     <script src="../static/js/validation.js" th:src="@{/js/jquery.js}"></script>
-    <!--  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>-->
     <script src="../static/js/semantic.min.js" th:src="@{/js/semantic.min.js}"></script>
-    <!--  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>-->
-    <!--  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>-->
     <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
     <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
     <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
@@ -281,7 +202,6 @@
     <script src="../static/js/appear.js" th:src="@{/js/appear.js}"></script>
     <script src="../static/js/parallax.min.js" th:src="@{/js/parallax.min.js}"></script>
 
-    <!-- main-js -->
     <script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
 </th:block>
 
