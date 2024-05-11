@@ -14975,7 +14975,8 @@ ol.ui.list li[value]:before {
 }
 
 .ui.inverted.attached.segment {
-    border-color: #555
+    /*border-color: #555*/
+
 }
 
 .ui.secondary.segment {
@@ -17740,6 +17741,7 @@ ol.ui.list li[value]:before {
     margin: 1rem 0;
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     background: #fff;
+    /*opacity:0.5;*/
     font-weight: 400;
     border: 1px solid rgba(34, 36, 38, .15);
     box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
@@ -17787,7 +17789,7 @@ ol.ui.list li[value]:before {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: 0 0;
+    background:  0 ;
     padding: .92857143em 1.14285714em;
     text-transform: none;
     color: rgba(0, 0, 0, .87);
@@ -17841,7 +17843,7 @@ ol.ui.list li[value]:before {
 }
 
 .ui.menu > .container, .ui.menu > .grid {
-    display: flex;
+    /*display: flex;*/
     align-items: inherit;
     flex-direction: inherit
 }

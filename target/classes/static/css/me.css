@@ -1,6 +1,14 @@
 
 body {
-    background: url("../images/bg.jpg");
+    /*background: url("../images/bg.jpg") no-repeat ;*/
+    /*background-size: cover ;*/
+}
+.sakura-canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: -1; /* 设置较低的z-index值使其显示在底层 */
 }
 .abc{
     height: 20px;
@@ -64,6 +72,7 @@ body {
     letter-spacing: 1px !important;
     line-height: 1.8;
 }
+
 .m-text-thin {
     font-weight: 300 !important;
 }

@@ -98,7 +98,8 @@
 <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
 
 </footer>
-
+<th:block th:replace="_fragments :: script">
+</th:block>
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
