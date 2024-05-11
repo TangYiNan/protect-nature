@@ -476,3 +476,13 @@ If you want an embedded database please put a supported one on the classpath. If
 2024-05-11 14:18:59.181  INFO 35712 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Result : aboutus
 2024-05-11 14:19:01.030  INFO 35712 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.jyj.web.AboutShowController.about', args=[]}
 2024-05-11 14:19:01.032  INFO 35712 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : about
+2024-05-11 14:20:24.240  INFO 35712 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.jyj.web.AboutShowController.about', args=[]}
+2024-05-11 14:20:24.240  INFO 35712 --- [http-nio-8080-exec-4] com.jyj.aspect.LogAspect                 : Result : about
+2024-05-11 14:20:35.705  INFO 35712 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.jyj.web.AboutShowController.about', args=[]}
+2024-05-11 14:20:35.705  INFO 35712 --- [http-nio-8080-exec-2] com.jyj.aspect.LogAspect                 : Result : about
+2024-05-11 14:22:30.831  INFO 35712 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.jyj.web.AboutShowController.about', args=[]}
+2024-05-11 14:22:30.831  INFO 35712 --- [http-nio-8080-exec-6] com.jyj.aspect.LogAspect                 : Result : about
+2024-05-11 14:22:32.822  INFO 35712 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.jyj.web.AboutShowController.about', args=[]}
+2024-05-11 14:22:32.822  INFO 35712 --- [http-nio-8080-exec-7] com.jyj.aspect.LogAspect                 : Result : about
+2024-05-11 14:22:43.701  INFO 35712 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Request : {url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.jyj.web.AboutShowController.about', args=[]}
+2024-05-11 14:22:43.701  INFO 35712 --- [http-nio-8080-exec-1] com.jyj.aspect.LogAspect                 : Result : about
