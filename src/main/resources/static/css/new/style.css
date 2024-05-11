@@ -614,7 +614,7 @@ img{
 .main-header .logo-box .logo:before{
   position: absolute;
   content: '';
-  background: url(../../images/icons/logo-shap.png);
+  /*background: url(../../images/bigLOGO.png);*/
   width: 216px;
   height: 57px;
   left: -20px;
@@ -2827,8 +2827,8 @@ h3 a:hover{
 .main-footer .footer-top{
   position: relative;
   display: block;
-  background: #253b70;
-  padding: 145px 0px 170px 0px;
+  background: #1a8b4d;
+  padding: 35px 0px 35px 0px;
 }
 
 .main-footer .footer-top .widget-title{
@@ -2988,7 +2988,7 @@ h3 a:hover{
   position: relative;
   display: block;
   background: #f0efe8;
-  padding: 33px 0px;
+  padding: 5px 0px;
 }
 
 .main-footer .footer-bottom .left-content{
@@ -3019,7 +3019,7 @@ h3 a:hover{
 .main-footer .footer-bottom .right-content .footer-logo:before {
   position: absolute;
   content: '';
-  background: url(../../images/icons/logo-shap-2.png);
+  /*background: url(../../images/icons/logo-shap-2.png);*/
   width: 216px;
   height: 57px;
   left: -57px;

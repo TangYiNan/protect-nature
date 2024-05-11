@@ -2008,7 +2008,7 @@
                 tables      : true,
                 breaks      : true,
                 pedantic    : false,
-                sanitize    : (settings.htmlDecode) ? false : true,  // 关闭忽略HTML标签，即开启识别HTML标签，默认为false
+                sanitize    : (settings.htmlDecode) ? false : true,  // 关闭忽略HTML地域，即开启识别HTML地域，默认为false
                 smartLists  : true,
                 smartypants : true
             };
@@ -3799,11 +3799,11 @@
     };
     
     /**
-     * 简单地过滤指定的HTML标签
+     * 简单地过滤指定的HTML地域
      * Filter custom html tags
      * 
      * @param   {String}   html          要过滤HTML
-     * @param   {String}   filters       要过滤的标签
+     * @param   {String}   filters       要过滤的地域
      * @returns {String}   html          返回过滤的HTML
      */
     
@@ -3952,7 +3952,7 @@
             tables      : true,
             breaks      : true,
             pedantic    : false,
-            sanitize    : (settings.htmlDecode) ? false : true, // 是否忽略HTML标签，即是否开启HTML标签解析，为了安全性，默认不开启
+            sanitize    : (settings.htmlDecode) ? false : true, // 是否忽略HTML地域，即是否开启HTML地域解析，为了安全性，默认不开启
             smartLists  : true,
             smartypants : true
         };
